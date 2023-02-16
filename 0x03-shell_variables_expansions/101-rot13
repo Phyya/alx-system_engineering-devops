@@ -1,0 +1,10 @@
+#!/bin/bash
+if [ -z "$1" ]; then
+  echo "Please provide a string to encode/decode."
+  exit 1
+fi
+encoded=$(echo "$1" | tr 'A-Za-z' 'N-ZA-Mn-za-m')
+decoded=$(echo "$encoded" | tr 'A-Za-z' 'N-ZA-Mn-za-m')
+echo "Input: $1"
+echo "Encoded: $encoded"
+echo "Decoded: $decoded"

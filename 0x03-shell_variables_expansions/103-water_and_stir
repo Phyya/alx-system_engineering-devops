@@ -1,0 +1,6 @@
+#!/bin/bash
+WATER=$WATER
+STIR=$STIR
+sum=$(( 2#$WATER + 2#$STIR ))
+result=$(echo "obase=bestchol; $sum" | bc)
+echo $result
